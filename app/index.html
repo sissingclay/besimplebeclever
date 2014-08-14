@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="beSimpleBeClever">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Be Simple Be Clever</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/rtg.css">
+    <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+</head>
+<body style="visibility: visible;" class="fire">
+
+  <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header id="head" role="banner">
+      <div id="header">
+          <a href="/" id="logo" role="link">
+              <img src="img/logo-fire.png" title="Be Simple Be Clever" alt="Be Simple Be Clever" role="img" />
+          </a>
+          <nav role="navigation">
+              <a href="#/" role="link" class="active">Work<span></span></a>
+              <a href="#/about" role="link">About</a>
+              <a href="#/say-hi" role="link">Say Hi</a>
+          </nav>
+          <div class="mood">
+              <div id="loving">Loving <span id="colName">Fire</span> Colour</div>
+              <a href="">Mood Ring</a>
+              <div class="colors">
+                  <a href="" class="fire"><span></span></a>
+                  <a href="" class="water"><span></span></a>
+                  <a href="" class="nature"><span></span></a>
+                  <a href="" class="sun"><span></span></a>
+                  <a href="" class="stone"><span></span></a>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div ng-view></div>
+
+  <footer>
+      <img src="img/x-footerlogo.png" alt="Be Simple Be Clever" />
+      <p>Majority of projects showcased in my portfolio have been designed during my full-time employment at KD Web who owns full rights to the projects.<br />
+          &copy; 2014 Be Simple Be Clever / Personal Portfolio of Malgorzata Maryniak, a Creative Director and User Experience Designer   |   <a href="/" class="fwrk">WORK</a>   <a href="about.html">ABOUT</a>   <a href="say-hi.html" class="awrk">SAY HI</a>   |</p>
+  </footer>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-deckgrid/angular-deckgrid.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>

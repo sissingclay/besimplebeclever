@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Museo300Regular';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo300-Regular-webfont.svg#Museo300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo700Regular';
+    src: url('../fonts/Museo700-Regular-webfont.eot');
+    src: url('../fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo700-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo700-Regular-webfont.svg#Museo700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.rtg-current-category {
+    color: #2d2b2b !important;
+    /*border-top: 5px solid #2d2b2b;*/
+}
+
+.rtg-categories > li > a {
+    color:white;
+}
+
+.rtg-images > div > div > p {
+    /*background: rgba(0, 0, 0, .6);*/
+    color: white;
+    font-size: 18px;
+    font-family: 'open sans', Arial;
+    font-weight: 300;
+    padding:5px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rtg-images > div > div > p > a {
+    background-color: #0875a8;
+    color: white;
+    padding: 1px 8px;
+    text-decoration: none;
+}
+
+.rtg-categories {
+    padding: 10px 0 33px 0;
+    list-style-type:none;
+}
+
+.rtg-categories > li {
+    display:inline-block;
+    height:30px;
+    margin-right:20px;
+}
+
+.rtg-categories > li > a {
+    padding:5px 0px 3px;
+    text-decoration:none;
+    font-family:"Lucida Grande", Arial, Helvetica, sans-serif;
+    font-weight:300;
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+.rtg-categories > li > a:hover {
+    color: #2d2b2b;
+}
+
+.rtg-images {
+    position:relative;
+}
+
+.rtg-images > div {
+    width:800px;
+    height:565px;
+    position:absolute;
+    visibility:hidden;
+    overflow: hidden;
+    border: 10px solid #ffffff;
+}
+
+.rtg-images > div#intro {
+    border: none;
+    cursor: default !important;
+    height: 300px !important;
+} 
+
+.rtg-images > div > p.firstP, .rtg-images > div > p.seconP {
+    font-size: 29px;
+    color: #ffffff;
+    line-height: 33px;
+    font-family: 'Museo300Regular', Arial, Helvetica, sans-serif;
+    height: 105px;
+}
+
+.rtg-images > div > p.firstP span.font, .rtg-images > div > p.seconP span.font {
+    font-family: 'Museo700Regular', Arial, Helvetica, sans-serif;
+}
+
+.rtg-images > div > p.firstP {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.rtg-images > div > p.seconP {
+    position:absolute;
+    top: 200px;
+    left: 0px;
+}
+
+.rtg-images > div > span {
+    position:absolute;
+    top:0;
+    left:0;
+    width:800px;
+    height:565px;
+    /*background-color:black;*/
+    z-index:2;
+    opacity:1;
+    background-image:url('../img/plus.png');
+    background-repeat:no-repeat;
+    background-position:center; 
+
+}
+
+.rtg-images > div#intro > span {
+    background-image:none;
+}
+
+.rtg-images > div > a > img {
+    border:none;
+    opacity:1;
+    position:absolute;
+    z-index:3;
+    opacity: 1;
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+}
+
+/*.rtg-images > div > a > img:hover {
+    opacity: .7;
+    -webkit-transform: scale(1.05,1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1.05,1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+    background: url('../../img/image-hover.png') no-repeat center center;
+}*/
+
+.rtg-images > div > a {
+    transition: background 1s;
+    -webkit-transition: background 3s;
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+}
+
+.fire .rtg-images > div > a > .hoverEffect {
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-image: -webkit-repeating-linear-gradient(-45deg, #e84124, #e84124 1px, transparent 1px, transparent 5px);
+    background-image: -moz-repeating-linear-gradient(-45deg, #e84124, #e84124 1px, transparent 1px, transparent 5px);
+    background-image: -o-repeating-linear-gradient(-45deg, #e84124, #e84124 1px, transparent 1px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #e84124, #e84124 1px, transparent 1px, transparent 5px);
+    display: none;
+    position: absolute;
+    z-index: 99;
+}
+
+.water .rtg-images > div > a > .hoverEffect {
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-image: -webkit-repeating-linear-gradient(-45deg, #41acbc, #41acbc 1px, transparent 1px, transparent 5px);
+    background-image: -moz-repeating-linear-gradient(-45deg, #41acbc, #41acbc 1px, transparent 1px, transparent 5px);
+    background-image: -o-repeating-linear-gradient(-45deg, #41acbc, #41acbc 1px, transparent 1px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #41acbc, #41acbc 1px, transparent 1px, transparent 5px);
+    display: none;
+    position: absolute;
+    z-index: 99;
+}
+
+.nature .rtg-images > div > a > .hoverEffect {
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-image: -webkit-repeating-linear-gradient(-45deg, #8ab23f, #8ab23f 1px, transparent 1px, transparent 5px);
+    background-image: -moz-repeating-linear-gradient(-45deg, #8ab23f, #8ab23f 1px, transparent 1px, transparent 5px);
+    background-image: -o-repeating-linear-gradient(-45deg, #8ab23f, #8ab23f 1px, transparent 1px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #8ab23f, #8ab23f 1px, transparent 1px, transparent 5px);
+    display: none;
+    position: absolute;
+    z-index: 99;
+}
+
+.sun .rtg-images > div > a > .hoverEffect {
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-image: -webkit-repeating-linear-gradient(-45deg, #fdb416, #fdb416 1px, transparent 1px, transparent 5px);
+    background-image: -moz-repeating-linear-gradient(-45deg, #fdb416, #fdb416 1px, transparent 1px, transparent 5px);
+    background-image: -o-repeating-linear-gradient(-45deg, #fdb416, #fdb416 1px, transparent 1px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #fdb416, #fdb416 1px, transparent 1px, transparent 5px);
+    display: none;
+    position: absolute;
+    z-index: 99;
+}
+
+.stone .rtg-images > div > a > .hoverEffect {
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-image: -webkit-repeating-linear-gradient(-45deg, #7c92cb, #7c92cb 1px, transparent 1px, transparent 5px);
+    background-image: -moz-repeating-linear-gradient(-45deg, #7c92cb, #7c92cb 1px, transparent 1px, transparent 5px);
+    background-image: -o-repeating-linear-gradient(-45deg, #7c92cb, #7c92cb 1px, transparent 1px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #7c92cb, #7c92cb 1px, transparent 1px, transparent 5px);
+    display: none;
+    position: absolute;
+    z-index: 99;
+}
+
+.rtg-images > div > a > .hoverEffect img {
+    position: absolute;
+}
+
+.rtg-images > div > div {
+    position: absolute;
+    bottom: 0px;
+    z-index: 4;
+    margin:0px;
+    visibility: hidden;
+    width:100%;
+    cursor: default;
+}
+
+.rtg-images > div > div > p {
+    margin:0px;
+    width:100%;
+}
+
+
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '4 .column.column-1-4';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+}
+
+.deckgrid .column {
+    float: left;
+}
+
+.deckgrid .column-1-4 {
+    width: 25%;
+}
