@@ -1,0 +1,16 @@
+$none: none;
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: $none;
+    height: 0;
+}
+
+[hidden] {
+    display: $none;
+}

@@ -3,36 +3,53 @@
 /* Controllers */
 
 angular.module('beSimpleBeClever.controllers', [])
-.controller('HomeCtrl', ['$scope', function($scope) {
+.controller('AppCtrl', ['$scope','$location','moods', function($scope,$location,moods) {
+    $scope.moodStatus   = false;
+    $scope.moodColour   = moods.stone;
 
-        $scope.photos = [
-            {id: 'photo-1', name: 'Awesome photo', src: 'http://www.besimplebeclever.com/img/transindus/img-1-bw.jpg'},
-            {id: 'photo-2', name: 'Great photo', src: 'http://www.besimplebeclever.com/img/testefy/img-1-bw.jpg'},
-            {id: 'photo-3', name: 'Strange photo', src: 'http://www.besimplebeclever.com/img/kdweb/img-1-bw.jpg'},
-            {id: 'photo-4', name: 'A photo?', src: 'http://www.besimplebeclever.com/img/healthside/img-1-bw.jpg'},
-            {id: 'photo-5', name: 'What a photo', src: 'http://www.besimplebeclever.com/img/spruntmedia/img-1-bw.jpg'},
-            {id: 'photo-6', name: 'Silly photo', src: 'http://www.besimplebeclever.com/img/bobbywhite/img-1-bw.jpg'},
-            {id: 'photo-7', name: 'Weird photo', src: 'http://www.besimplebeclever.com/img/stonehaven/img-1-bw.jpg'},
-            {id: 'photo-8', name: 'Modern photo', src: 'http://www.besimplebeclever.com/img/fitboard/img-1-bw.jpg'},
-            {id: 'photo-9', name: 'Classical photo', src: 'http://www.besimplebeclever.com/img/electricbanana/img-1-bw.jpg'},
-            {id: 'photo-10', name: 'Dynamic photo', src: 'http://www.besimplebeclever.com/img/cavendish/img-1-bw.jpg'},
-            {id: 'photo-11', name: 'Neat photo', src: 'http://www.besimplebeclever.com/img/libertine/img-1-bw.jpg'},
-            {id: 'photo-12', name: 'Bumpy photo', src: 'http://www.besimplebeclever.com/img/raven/img-1-bw.jpg'},
-            {id: 'photo-13', name: 'Brilliant photo', src: 'http://www.besimplebeclever.com/img/findmybeach/img-1-bw.jpg'},
-            {id: 'photo-14', name: 'Excellent photo', src: 'http://www.besimplebeclever.com/img/capita/img-1-bw.jpg'},
-            {id: 'photo-15', name: 'Gorgeous photo', src: 'http://www.besimplebeclever.com/img/lbh/img-1-bw.jpg'},
-            {id: 'photo-16', name: 'Lovely photo', src: 'http://www.besimplebeclever.com/img/raven/img-2-bw.jpg'},
-            {id: 'photo-17', name: 'A "wow" photo', src: 'http://www.besimplebeclever.com/img/besimplebeclever/img-1-bw.jpg'},
-            {id: 'photo-18', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/marychocolatier/img-1-bw.jpg'},
-            {id: 'photo-19', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/overseaspension/img-1-bw.jpg'},
-            {id: 'photo-20', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/sdcl/img-1-bw.jpg'},
-            {id: 'photo-21', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/abcschool/img-1-bw.jpg'},
-            {id: 'photo-22', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/ress/img-1-bw.jpg'},
-            {id: 'photo-23', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/morganpryce/img-1-bw.jpg'},
-            {id: 'photo-24', name: 'Bodacious photo', src: 'http://www.besimplebeclever.com/img/kdweb/img-2-bw.jpg'}
-        ];
+    console.log($location.path('/project'));
+
+    $scope.isActive = function(url) {
+        return url === $location.path();
+    };
+
+    $scope.isVisibleMood = function() {
+        $scope.moodStatus = !$scope.moodStatus;
+    }
+
+    $scope.moodRing = function (moodTitle,moodClass) {
+        $scope.moodColour.title     = moodTitle;
+        $scope.moodColour.class     = moodClass;
+        $scope.moodStatus           = !$scope.moodStatus;
+    }
 
 }])
-.controller('AboutCtrl', ['$scope', function($scope) {
+.controller('HomeCtrl', ['$scope', 'projectService', function($scope,projectService) {
+
+    $scope.photos = {};
+
+    projectService.getAll().then(function(data){
+        $scope.photos = data;
+    });
+
+}])
+.controller('SayHiCtrl', ['$scope', function($scope) {
+    $scope.submitted = false;
+
+    $scope.submitForm = function(form) {
+        if(form.$valid) {
+            alert('valid');
+        } else {
+            $scope.submitted = true;
+        }
+    };
+}])
+.controller('ProjectCtrl', ['$scope','$routeParams','projectService','baseUrl', function($scope,$routeParams,projectService,baseUrl) {
+        $scope.project      = {};
+        $scope.baseUrl      = baseUrl;
+
+        projectService.getProject($routeParams.project).then(function(data){
+            $scope.project  = data;
+        });
 
 }]);

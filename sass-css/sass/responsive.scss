@@ -1,0 +1,452 @@
+@font-face {
+    font-family: 'Museo300Regular';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo300-Regular-webfont.svg#Museo300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Museo700Regular';
+    src: url('../fonts/Museo700-Regular-webfont.eot');
+    src: url('../fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo700-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo700-Regular-webfont.svg#Museo700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+$font-family: 'Museo300Regular', Arial, Helvetica, sans-serif;
+$common-font: "Lucida Grande", Arial, Helvetica, sans-serif;
+$water: #30808c;
+$fire: #af311b;
+$nature: #63802c;
+$sun: #d5a233;
+$stone: #6c7fb0;
+
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+    .lightbox section.lightHead, .lightbox section.white {
+        width: auto !important;
+    }
+
+    .bigImage img.resize {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    header .colors {
+        left: 420px;
+        position: absolute;
+        top: 55px;
+    }
+
+    .lightbox section.lightHead, .lightbox section.white {
+        width: auto !important;
+    }
+
+    .bigImage img.resize {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 641px) {
+    
+    header #logo {
+        margin-right: 0;
+    }
+    
+    header #header {
+        width: auto;
+        padding: 0 0 20px 10px;
+    }
+
+    header #header nav {
+        display: none;
+    }
+    
+    .mood {
+        float: right;
+        margin-right: 10px;
+        text-align: right;
+        width: 200px;
+    }
+
+    header .mood #loving {
+        left:auto;
+        right: 0px;
+        text-align: right;
+        width: 155px;
+    }
+
+    header .mood a, header .mood a:visited {
+        margin-right: 0px;
+    }
+    
+    header .mood a, header .mood a:visited {
+        float: right;
+    }
+
+    header .colors {
+        left: auto;
+        right: 0;
+        top: 56px;
+    }
+    
+    .lightbox section.lightHead, .lightbox section.white {
+        width: auto !important;
+    }
+
+    .bigImage img.resize {
+        width: 100%;
+        height: auto;
+    }
+
+    #mobile {
+        display: block;
+        z-index: 1000000;
+    } 
+    
+    a.menu, a.menu:visited {
+        display: block;
+        padding: 10px 10px;
+        color: #ffffff;
+        font-family: $font-family;
+        font-size: 18px;
+        text-transform: uppercase;
+        background: #2d2b2b url('../img/mobile-icon.gif') no-repeat right center;
+    }
+    
+    #mobile nav {
+        position: absolute;
+        z-index: 1000000;
+        width: 100%;
+        display: none;
+        background-color: #2d2b2b;
+    }
+    
+    #mobile nav a, #mobile nav a:visited {
+        display: block;
+        padding: 10px 10px 10px 10px;
+        color: #ffffff;
+        font-family: $common-font;
+        text-transform: uppercase;
+    }
+
+    .water {
+        #mobile nav a.active {
+            color: $water;
+        }
+    }
+
+    .fire {
+        #mobile nav a.active {
+            color: $fire;
+        }
+    }
+
+    .nature {
+        #mobile nav a.active {
+            color: $nature;
+        }
+    }
+
+    .sun {
+        #mobile nav a.active {
+            color: $sun;
+        }
+    }
+
+    .stone {
+        #mobile nav a.active {
+            color: $stone;
+        }
+    }
+
+    #container {
+        padding: 0px 10px 40px 10px;
+    }
+    
+    #container.internal {
+        padding: 20px 10px 40px;
+    }
+
+    .rtg-categories {
+        list-style-type: none;
+        padding: 10px 0 10px !important;
+    }
+
+    .internal #floatRight {
+        float: right;
+        height: auto;
+        padding: 0 0 20px 20px;
+        position: relative;
+        width: 150px;
+        img {
+            width: 150px;
+            height: auto;
+        }
+        #star {
+            left: 78px;
+            top: 48px;
+        }
+        #star img {
+            width: 41px;
+            height: 41px;
+        }   
+    }
+
+    footer {
+        padding: 0 10px 40px 10px;
+    }
+    
+    label.error {
+        display: none !important;
+    }
+
+    #mobile:after {
+        content: '.';
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0px;
+    }
+
+}
+
+@media screen and (max-width: 640px) and (min-width: 0px) {
+    
+    #loaderImage {
+        display:none !important;
+    }
+
+    #jpreLoader {
+        left: 31% !important;
+        position: absolute;
+        top: 25% !important;
+        width: 125px;
+    }
+
+    header #logo {
+        margin-right: 0;
+        height: auto;
+        width: 120px;
+        img {
+            width: 120px;
+            height: auto;
+        }
+        margin-top: 18px;
+    }
+
+    header #header {
+        width: auto;
+        padding: 0px 0px 15px 10px;
+    }
+
+    .internal #floatRight {
+        float: right;
+        height: auto;
+        padding: 0 0 20px 20px;
+        position: relative;
+        width: 90px;
+        img {
+            width: 90px;
+            height: auto;
+        }
+        #star {
+            left: 57px;
+            top: 28px;
+        }
+        #star img {
+            width: 20px;
+            height: auto;
+        }   
+    }
+
+    header #header nav {
+        display: none;
+    }
+    
+    #container.internal {
+        max-width: auto;
+        padding: 10px 10px 15px !important;
+    }
+
+    .mood {
+        float: right;
+        margin-right: 15px;
+        text-align: right;
+        width: 165px;
+    }
+
+    header .mood #loving {
+        left:auto;
+        right: 0px;
+        text-align: right;
+        width: 155px;
+    }
+
+    header .mood a, header .mood a:visited {
+        margin-right: 0px;
+    }
+    
+    header .mood a, header .mood a:visited {
+        float: right;
+    }
+
+    header .colors {
+        left: auto;
+        right: 0;
+        top: 56px;
+    }
+    
+    .lightbox section.lightHead, .lightbox section.white {
+        width: auto !important;
+    }
+
+    .bigImage img.resize {
+        width: 100%;
+        height: auto;
+    }
+
+    #mobile {
+        display: block;
+        z-index: 1000000;
+    } 
+    
+    a.menu, a.menu:visited {
+        display: block;
+        padding: 10px 10px;
+        color: #ffffff;
+        font-family: $font-family;
+        font-size: 18px;
+        text-transform: uppercase;
+        background: #2d2b2b url('../img/mobile-icon.gif') no-repeat right center;
+    }
+    
+    #mobile nav {
+        position: absolute;
+        z-index: 1000000;
+        width: 100%;
+        display: none;
+        background-color: #2d2b2b;
+    }
+    
+    #mobile nav a, #mobile nav a:visited {
+        display: block;
+        padding: 10px 10px 10px 10px;
+        color: #ffffff;
+        font-family: $common-font;
+        text-transform: uppercase;
+    }
+
+    .water {
+        #mobile nav a.active {
+            color: $water;
+        }
+    }
+
+    .fire {
+        #mobile nav a.active {
+            color: $fire;
+        }
+    }
+
+    .nature {
+        #mobile nav a.active {
+            color: $nature;
+        }
+    }
+
+    .sun {
+        #mobile nav a.active {
+            color: $sun;
+        }
+    }
+
+    .stone {
+        #mobile nav a.active {
+            color: $stone;
+        }
+    }
+
+    #container {
+        padding: 10px 10px 15px 10px;
+    }
+    
+    #myGallery .rtg-images > div#intro {
+        position: relative;
+        height: 320px!important;
+    }
+
+    #myGallery .rtg-images > div > p.firstP {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .rtg-images > div, .rtg-images > div > a > img {
+        width: 97% !important;
+        visibility: visible !important;
+        position: relative !important;
+        height: auto !important;
+    }
+    
+    .rtg-images > div > a {
+        cursor: default !important;
+    }
+    #intro img {
+        display: none;
+        visibility: hidden;
+    }
+    #myGallery .rtg-images > div > p.firstP,
+    #myGallery .rtg-images > div > p.seconP {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        height: auto !important;
+    }
+    .rtg-images > div {
+        border: none !important;
+        overflow: visible !important;
+    }
+
+    .rtg-images > div > a > img {
+        height: auto !important;
+        border: 10px solid #FFFFFF !important;
+    }
+
+    .rtg-categories > li {
+        display: inline-block;
+        height: 30px;
+        margin-right: 10px !important;
+    }
+    .rtg-categories {
+        list-style-type: none;
+        padding: 10px 0 10px !important;
+    }
+
+    footer {
+        padding: 0 15px 15px 15px;
+    }
+    
+    label.error {
+        display: none !important;
+    }
+
+    #mobile:after {
+        content: '.';
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0px;
+    }
+
+}

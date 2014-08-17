@@ -343,9 +343,9 @@
 
 
 .deckgrid {
-    margin:100px auto;
-    padding:10px;
-    width:95%;
+    margin:0 auto 100px;
+    padding:0;
+    width:100%;
 }
 
 .deckgrid[deckgrid]::before {
@@ -406,6 +406,10 @@
 
 .deckgrid .column.size-1-1 {
     width:280px;
+}
+
+.socialIcons {
+    font-size: 18px;
 }
 
 @media screen and (max-width: 1000px) {

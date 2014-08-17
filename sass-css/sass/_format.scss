@@ -1,0 +1,665 @@
+@font-face {
+    font-family: 'Museo300Regular';
+    src: url('../fonts/Museo300-Regular-webfont.eot');
+    src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo300-Regular-webfont.svg#Museo300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Museo700Regular';
+    src: url('../fonts/Museo700-Regular-webfont.eot');
+    src: url('../fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Museo700-Regular-webfont.woff') format('woff'),
+         url('../fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Museo700-Regular-webfont.svg#Museo700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$font-family: 'Museo300Regular', Arial, Helvetica, sans-serif;
+$font-family-700: 'Museo700Regular', Arial, Helvetica, sans-serif;
+$font-size: 18px;
+$nav-color: #2d2623;
+$nav-color-fire: #e84124;
+$nav-color-water: #41acbc;
+$nav-color-stone: #7c92cb;
+$nav-color-sun: #fdb416;
+$nav-color-nature: #8ab23f;
+$nav-decor: none;
+$font-caps: uppercase;
+$nav-active: #e84124;
+$common-font: "Lucida Grande", Arial, Helvetica, sans-serif;
+$common-color: #2d2b2b;
+$color-white: #ffffff;
+
+body {
+    background-color: #ffffff;
+    visibility: hidden;
+}
+
+body#internalPg {
+    visibility: hidden;
+}
+
+body.fire {
+    background-color: $nav-color-fire;
+    #jpreOverlay {
+            background-color: $nav-color-fire;
+    }
+}
+
+body.water {
+    background-color: $nav-color-water;
+    #jpreOverlay {
+            background-color: $nav-color-water;
+    }
+}
+
+body.nature {
+    background-color: $nav-color-nature;
+    #jpreOverlay {
+            background-color: $nav-color-nature;
+    }
+}
+
+body.sun {
+    background-color: $nav-color-sun;
+    #jpreOverlay {
+            background-color: $nav-color-sun;
+    }
+}
+
+body.stone {
+    background-color: $nav-color-stone;
+    #jpreOverlay {
+            background-color: $nav-color-stone;
+    }
+}
+
+#jpreLoader {
+    left: 45% !important;
+    position: absolute;
+    top: 50% !important;
+    width: 125px;
+}
+
+#jprePercentage {
+    color: #ffffff;
+    font-family: $font-family-700;
+    text-align: center;
+    font-size: 25px;
+}
+
+.preImage {
+    display: none;
+}
+
+#jprePercentage {
+    display: none;
+}
+
+header {
+    nav, .mood {
+        font-family: $font-family;
+        font-size: $font-size;
+        color: $nav-color;
+        text-decoration: $nav-decor;
+        text-transform: $font-caps;
+    }
+
+    nav a,  nav a:visited, .mood a, .mood a:visited {
+        font-family: $font-family;
+        font-size: $font-size;
+        color: $nav-color;
+        text-decoration: $nav-decor;
+        padding: 10px 0px 0px 0px;
+        margin-right: 23px;
+        line-height: 24px;
+        display: block;
+        float: left;
+        position: relative;
+        background-color: transparent;
+    }
+    
+    nav a.active span,  nav a.active:visited span {
+        background: url('../img/arrow-fire.png')no-repeat center bottom;
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 12px;
+        bottom: -20px;
+        text-align: center;
+        cursor: default;
+        margin: 0px auto;
+    }
+
+    nav a:hover {
+        color: $nav-active;
+    }
+
+    .mood #loving {
+        font-size: 11px;
+        font-family: $common-font;
+        left: 422px;
+        position: absolute;
+        top: 32px;
+    }
+
+    .mood a, .mood a:visited {
+        padding: 10px 0px 0px 0px;
+    }
+    .colors {
+        left: 580px;
+        position: absolute;
+        top: 34px;
+    }
+
+    .mood .colors a, .mood .colors a:visited {
+        padding-right: 0px;
+        line-height: 15px;
+        margin: 0px 4px 0px 0px;
+        display: block;
+        float: left;
+        width: 24px;
+        height: 22px;
+    }
+
+    .mood .colors a.active span, .mood .colors a.active:visited span {
+        background: url('../img/bullet-point.gif')no-repeat center bottom;
+        height: 27px;
+        width: 25px;
+        display: block;
+        float: left;
+    }
+
+    .mood .colors a.fire, .mood .colors a.fire:visited {
+        background: url('../img/ringmood-star-fire.png')no-repeat right center;
+    }
+
+    .mood .colors a.water, .mood .colors a.water:visited {
+        background: url('../img/ringmood-star-water.png')no-repeat right center;
+    }
+
+    .mood .colors a.nature, .mood .colors a.nature:visited {
+        background: url('../img/ringmood-star-nature.png')no-repeat right center;
+    }
+
+    .mood .colors a.sun, .mood .colors a.sun:visited {
+        background: url('../img/ringmood-star-sun.png')no-repeat right center;
+    }
+
+    .mood .colors a.stone, .mood .colors a.stone:visited {
+        background: url('../img/ringmood-star-stone.png')no-repeat right center;
+    }
+
+}
+
+.fire header {
+    nav a.active span, nav a.active:visited span {
+        background: url('../img/arrow-fire.png')no-repeat center bottom;
+    }
+    nav a:hover, .mood a:hover {
+        color: $nav-color-fire;
+    }
+    nav a.active:hover {
+        color: $nav-color;
+    }
+    
+    .mood #loving {
+        color: $nav-color-fire;
+    }
+
+} 
+
+.water header {
+    nav a.active span, nav a.active:visited span {
+        background: url('../img/arrow-water.png')no-repeat center bottom;
+    }
+    nav a:hover, .mood a:hover {
+        color: $nav-color-water;
+    }
+    nav a.active:hover {
+        color: $nav-color;
+    }
+
+    .mood #loving {
+        color: $nav-color-water;
+    }
+}
+
+.nature  header {
+    nav a.active span, nav a.active:visited span {
+        background: url('../img/arrow-nature.png')no-repeat center bottom;
+    }
+    nav a:hover, .mood a:hover {
+        color: $nav-color-nature;
+    }
+    nav a.active:hover {
+        color: $nav-color;
+    }
+
+    .mood #loving {
+        color: $nav-color-nature;
+    }
+}
+
+.stone header {
+    nav a.active span, nav a.active:visited span {
+        background: url('../img/arrow-stone.png')no-repeat center bottom;
+    }
+    nav a:hover, .mood a:hover {
+        color: $nav-color-stone;
+    }
+    nav a.active:hover {
+        color: $nav-color;
+    }
+
+    .mood #loving {
+        color: $nav-color-stone;
+    }
+}
+
+.sun header {
+    nav a.active span, nav a.active:visited span {
+        background: url('../img/arrow-sun.png')no-repeat center bottom;
+    }
+    nav a:hover, .mood a:hover {
+        color: $nav-color-sun;
+    }
+    nav a.active:hover {
+        color: $nav-color;
+    }
+
+    .mood #loving {
+        color: $nav-color-sun;
+    }
+}
+
+.internal {
+    h1 {
+        font-family: $font-family-700;
+        font-size: 100px;
+        color: #ffffff;
+        margin-bottom: 46px;
+        text-transform: lowercase;
+    }
+
+    p {
+        font-family: $font-family;
+        font-size: 30px;
+        color: #ffffff;
+        line-height: 40px;
+        margin-bottom: 46px;
+    }
+    
+    p span {
+        font-family: $font-family-700;
+    }
+
+    #floatRight {
+        float: right;
+        width: 299px;
+        height: 529px;
+        padding: 0px 0px 20px 20px;
+        position: relative;
+
+        #star {
+            left: 145px;
+            position: absolute;
+            top: 96px;
+        }
+    }
+
+    .black {
+        margin: 0px 0px 35px -40px;
+        background-color: #2d2b2b;
+        background-size: 14px 14px;
+        padding: 30px;
+        p {
+            margin-bottom: 0px;
+            background-color: #2d2b2b;
+            padding: 10px;
+            a, a:visited {
+                color: #ffffff;
+                text-decoration: underline;
+                font-family: $font-family-700;
+            }
+
+            span {
+                background-color: #2d2b2b;
+                padding: 10px;
+            }
+        }
+    }
+
+    ul li {
+        float: left;
+        font-family: $font-family-700;
+        text-transform: uppercase;
+        margin-right: 17px;
+        font-size: 18px;
+        color: #ffffff;
+        a, a:visited {
+            color: #ffffff;
+            display: block;
+            float: left;
+            height: 30px;
+            padding-top: 5px;
+        }
+        a:hover {
+            color: $nav-color;
+        }
+        a.email, a.email:visited {
+            background: url('../img/email.png') no-repeat right 4px;
+            padding-right: 35px;
+            margin-right: 25px;
+        }
+        a.linked, a.linked:visited {
+            background: url('../img/linkedIn.png') no-repeat right 0px;
+            padding-right: 30px;
+        }
+        a.twitter, a.twitter:visited {
+            background: url('../img/twitter.png') no-repeat right 0px;
+            padding-right: 30px;
+        }
+    }
+   ul li.nolink {
+        height: 30px;
+        padding-top: 5px;
+   }
+}
+
+.fire .internal {
+    .black {
+        background-image: -webkit-repeating-linear-gradient(-45deg, $nav-color-fire, $nav-color-fire 1px, transparent 1px, transparent 10px);
+        background-image: -moz-repeating-linear-gradient(-45deg, $nav-color-fire, $nav-color-fire 1px, transparent 1px, transparent 10px);
+        background-image: -o-repeating-linear-gradient(-45deg, $nav-color-fire, $nav-color-fire 1px, transparent 1px, transparent 10px);
+        background-image: repeating-linear-gradient(-45deg, $nav-color-fire, $nav-color-fire 1px, transparent 1px, transparent 10px);
+    }
+    .black p a:hover {
+        color: $nav-color-fire;
+    }
+}
+
+.water .internal {
+    .black {
+        background-image: -webkit-repeating-linear-gradient(-45deg, $nav-color-water, $nav-color-water 1px, transparent 1px, transparent 10px);
+        background-image: -moz-repeating-linear-gradient(-45deg, $nav-color-water, $nav-color-water 1px, transparent 1px, transparent 10px);
+        background-image: -o-repeating-linear-gradient(-45deg, $nav-color-water, $nav-color-water 1px, transparent 1px, transparent 10px);
+        background-image: repeating-linear-gradient(-45deg, $nav-color-water, $nav-color-water 1px, transparent 1px, transparent 10px);
+    }
+    .black p a:hover {
+        color: $nav-color-water;
+    }
+}
+
+.nature .internal {
+    .black {
+        background-image: -webkit-repeating-linear-gradient(-45deg, $nav-color-nature, $nav-color-nature 1px, transparent 1px, transparent 10px);
+        background-image: -moz-repeating-linear-gradient(-45deg, $nav-color-nature, $nav-color-nature 1px, transparent 1px, transparent 10px);
+        background-image: -o-repeating-linear-gradient(-45deg, $nav-color-nature, $nav-color-nature 1px, transparent 1px, transparent 10px);
+        background-image: repeating-linear-gradient(-45deg, $nav-color-nature, $nav-color-nature 1px, transparent 1px, transparent 10px);
+    }
+    .black p a:hover {
+        color: $nav-color-nature;
+    }
+}
+
+.stone .internal {
+    .black {
+        background-image: -webkit-repeating-linear-gradient(-45deg, $nav-color-stone, $nav-color-stone 1px, transparent 1px, transparent 10px);
+        background-image: -moz-repeating-linear-gradient(-45deg, $nav-color-stone, $nav-color-stone 1px, transparent 1px, transparent 10px);
+        background-image: -o-repeating-linear-gradient(-45deg, $nav-color-stone, $nav-color-stone 1px, transparent 1px, transparent 10px);
+        background-image: repeating-linear-gradient(-45deg, $nav-color-stone, $nav-color-stone 1px, transparent 1px, transparent 10px);
+    }
+    .black p a:hover {
+        color: $nav-color-stone;
+    }
+}
+
+.sun .internal {
+    .black {
+        background-image: -webkit-repeating-linear-gradient(-45deg, $nav-color-sun, $nav-color-sun 1px, transparent 1px, transparent 10px);
+        background-image: -moz-repeating-linear-gradient(-45deg, $nav-color-sun, $nav-color-sun 1px, transparent 1px, transparent 10px);
+        background-image: -o-repeating-linear-gradient(-45deg, $nav-color-sun, $nav-color-sun 1px, transparent 1px, transparent 10px);
+        background-image: repeating-linear-gradient(-45deg, $nav-color-sun, $nav-color-sun 1px, transparent 1px, transparent 10px);
+    }
+    .black p a:hover {
+        color: $nav-color-sun;
+    }
+}
+
+*:focus {outline: none;}
+
+input, textarea {
+    width: 290px;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 10px solid #ffffff;
+    height: 28px;
+    margin-bottom: 18px;
+    font-family: $common-font;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+textarea {
+    width: 295px;
+    height: 120px;
+}
+
+.contact_form div {
+    position: relative;
+}
+
+label.error {
+    background: url('../img/error.png') no-repeat 0px center;
+    color: #ffffff;
+    padding: 20px;
+    width: 280px;
+    display:block;
+    position: absolute;
+    left: 340px;
+    top: 0px;
+    font-size: 12px;
+    font-family: $common-font;
+    text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+
+.contact_form input:focus, .contact_form textarea:focus { 
+    border-bottom:10px solid $nav-color; 
+    box-shadow: 0 0 0;
+}
+
+input#send {
+    width: 16px;
+    height: 16px;
+    margin: 0px 0px 0px 0px;
+    border-bottom: none;
+    display: block;
+    float: left;
+}
+
+input#send:focus { 
+    border-bottom:none; 
+    box-shadow: 0 0 0;
+}
+
+#copy label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: $font-family;
+    line-height: 16px;
+    display: block;
+    float: right;
+    width: 130px;
+}
+
+button {
+    background-color: #2d2623;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 12px 22px;
+}
+
+footer .fwrk, footer .awrk {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+footer p {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: $common-font;
+    color: $common-color;
+}
+
+footer p a, footer p a:visited {
+    color: $common-color;
+}
+
+footer p a:hover {
+    color: $color-white;
+}
+
+.lightbox section.lightHead, .lightbox section.white {
+    display: block;
+    background-color: #1f1e1e;
+    padding: 25px;
+    width: 810px !important;
+    height: auto !important;
+    position: relative;
+    z-index: 111;
+}
+
+.lightbox section.white {
+    background-color: #ffffff;
+    height: 1px;
+    padding: 25px 25px 0px;
+}
+
+.lightbox section.lightHead p.title {
+    font-family: $font-family-700;
+    font-size: 29px;
+    line-height: 31px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.lightbox section.lightHead p.larger {
+    color: #666666;
+    line-height: 23px;
+    font-size: 12px;
+    font-family: $common-font;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.lightbox section.lightHead p {
+    color: #666666;
+    line-height: 18px;
+    font-size: 12px;
+    font-family: $common-font;
+}
+
+.lightbox .bigImage {
+    padding: 0px 26px 26px;
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+    cursor:grab;
+    cursor:-moz-grab;
+    cursor:-webkit-grab;
+}
+
+.swatch {
+    float: right;
+}
+
+a.website, a.website:visited {
+    background: url('../img/lightbox-icons.gif') no-repeat left top;
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    display: block;
+    width: 45px;
+    height: 40px;
+}
+
+a, a:visited {
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+
+a.website, a.website:visited, .fancybox-close, 
+.mood .colors a, .mood .colors a:visited, .mood .colors a.active:hover, .bigImage a.top img {
+-webkit-transition: opacity 300ms ease-in;
+    -moz-transition: opacity 300ms ease-in;
+    -ms-transition: opacity 300ms ease-in;
+    -o-transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-in;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=100);
+    -moz-opacity:1.0;
+    -khtml-opacity: 1.0;
+    opacity: 1.0;
+}
+
+a.website:hover, .fancybox-close:hover, .mood .colors a:hover, .bigImage a.top:hover img {
+-webkit-transition: opacity 300ms ease-in;
+    -moz-transition: opacity 300ms ease-in;
+    -ms-transition: opacity 300ms ease-in;
+    -o-transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-in;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.black:after {
+    content: ".";
+    visibility: hidden;
+    clear: both;
+    height: 0px;
+    display: block;
+}

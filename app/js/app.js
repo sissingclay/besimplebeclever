@@ -3,24 +3,40 @@
 // Declare app level module which depends on filters, and services
 angular.module('beSimpleBeClever', [
     'ngRoute',
+    'ngResource',
     'akoenig.deckgrid',
-    'beSimpleBeClever.controllers'
+    'beSimpleBeClever.controllers',
+    'beSimpleBeClever.directives',
+    'beSimpleBeClever.constants',
+    'beSimpleBeClever.services'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+    $locationProvider.hashPrefix('!');
     $routeProvider.when('/',
         {
           templateUrl: 'partials/home.html',
           controller: 'HomeCtrl'
         });
+    $routeProvider.when('/project/:project',
+        {
+            templateUrl: 'partials/project.html',
+            controller: 'ProjectCtrl'
+        });
     $routeProvider.when('/about',
         {
-            templateUrl: 'partials/about.html',
-            controller: 'AboutCtrl'
+            templateUrl: 'partials/about.html'
         });
     $routeProvider.when('/say-hi',
         {
             templateUrl: 'partials/say-hi.html',
-            controller: 'HiCtrl'
+            controller: 'SayHiCtrl'
         });
     $routeProvider.otherwise({redirectTo: '/'});
 }]);
+
+angular.module('beSimpleBeClever.constants', []).
+constant('moods', {
+    fire: {title: 'fire', class: 'fire'},
+    stone: {title:'gemstone', class: 'stone'}
+}).
+constant('baseUrl', 'http://localhost:8080/app/');

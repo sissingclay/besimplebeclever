@@ -1,3 +1,5 @@
+<data-ng-include src="'partials/includes/header.html'"></data-ng-include>
+
 <section id="container" class="internal">
     <h1>Say Hi</h1>
     <div id="floatRight">
@@ -13,24 +15,27 @@
 
 
     <ul>
-        <li><a href="mailto:malgorzata.maryniak@gmail.com" class="email">Email Me</a></li>
+        <li><a href="mailto:malgorzata.maryniak@gmail.com" class="email">Email Me <i class="fa fa-envelope-square socialIcons"></i></a></li>
         <li class="nolink">Follow Me On</li>
-        <li><a href="http://uk.linkedin.com/pub/malgorzata-maryniak/62/45a/736" target="_blank" class="linked">LinkedIN</a></li>
-        <li><a href="https://twitter.com/@besimple_clever" target="_blank" class="twitter">Twitter</a></li>
+        <li><a href="http://uk.linkedin.com/pub/malgorzata-maryniak/62/45a/736" target="_blank" class="linked">LinkedIN <i class="fa fa-linkedin-square socialIcons"></i></a></li>
+        <li><a href="https://twitter.com/@besimple_clever" target="_blank" class="twitter">Twitter <i class="fa fa-twitter-square socialIcons"></i></a></li>
     </ul>
-    <form class="contact_form" id="contact_form" action="send.php" method="post" name="contact_form" novalidate>
+    <form data-ng-submit="submitForm(contact_form)" class="contact_form" id="contact_form" action="" method="post" name="contact_form" novalidate>
         <div>
-            <input type="text"  name="name" placeholder="Name" id="name" />
+            <input type="text" name="name" data-ng-model="form.name" placeholder="Name" id="name" required />
+            <label for="name" generated="true" class="error" data-ng-show="contact_form.name.$invalid && submitted">would like to know that</label>
         </div>
         <div>
-            <input type="email" name="email" placeholder="Email Address" id="email"  >
+            <input type="email" name="email" data-ng-model="form.email" placeholder="Email Address" id="email" required>
+            <label for="email" generated="true" class="error" data-ng-show="contact_form.email.$invalid && submitted">definitely need your email</label>
         </div>
         <div>
-            <textarea name="message" cols="40" rows="6" placeholder="Message" id="message"></textarea>
+            <textarea name="message" cols="40" rows="6" data-ng-model="form.message" placeholder="Message" id="message" required></textarea>
+            <label for="message" generated="true" class="error" data-ng-show="contact_form.message.$invalid && submitted">nothing to say? really...? :)</label>
         </div>
         <div>
             <div id="copy">
-                <input type="checkbox" name="copy" id="send" />
+                <input type="checkbox" name="copy" id="send" data-ng-model="form.copy" />
                 <label for="send">send a copy of this email to yourself</label>
             </div>
             <button class="submit" type="submit" >Submit</button>
@@ -38,3 +43,5 @@
     </form>
 
 </section>
+
+<data-ng-include src="'partials/includes/footer.html'"></data-ng-include>

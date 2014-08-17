@@ -1,0 +1,23 @@
+{
+    "title": "Transindus",
+    "subtitle": "CREATED AT KD WEB",
+    "description": "New look for the UK's largest operator of tailor-made and group tours to Asia. Work included: overall look and feel, page schematic.",
+    "images": [
+        {
+            "image": "img/transindus/img-1a.jpg"
+        },
+        {
+            "image": "img/transindus/img-1b.jpg"
+        },
+        {
+            "image": "img/transindus/img-1c.jpg"
+        },
+        {
+            "image": "img/transindus/img-1d.jpg"
+        },
+        {
+            "image": "img/transindus/img-1e.jpg"
+        }
+    ],
+    "swatch": "img/transindus/img-100.jpg"
+}

@@ -1,0 +1,21 @@
+<header role="banner" id="project">
+    <div class="header-wrapper">
+        <h1>{{project.title}}</h1>
+        <p class="agency">{{project.subtitle}}</p>
+        <p>{{project.description}}</p>
+        <nav role="navigation">
+            <a href="" class="prev"><</a>
+            <a href="" class="next">></a>
+            <a href="" class="home"></a>
+        </nav>
+    </div>
+</header>
+<main role="main">
+    <div data-ng-repeat="image in project.images">
+        <img  data-ng-src="{{baseUrl}}{{image.image}}" alt="{{project.title}}" />
+    </div>
+    <section>
+        <a href="javascript:void(0)" class="top"><img src="{{baseUrl}}/img/top.gif" /></a>
+        <img data-ng-src="{{baseUrl}}{{swatch}}" class="swatch" />
+    </section>
+</main>

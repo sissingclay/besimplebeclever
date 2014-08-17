@@ -1,0 +1,83 @@
+$main-width-per: 100%;
+$main-width: 92%;
+$style: solid;
+$padding: 0px 0px 20px 40px;
+$float: left;
+$padding-right: 63px;
+$font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+$right-top-pad: 32px;
+
+#container {
+    padding: $padding;
+}
+
+header {
+    width: $main-width-per;
+    background-color: #ffffff;
+    padding: 20px 0px;
+    height: 78px;
+    #header {
+        width: $main-width;
+        padding: $padding;
+    }
+
+    #logo {
+        display: block;
+        float: $float;
+        margin-right: $padding-right;
+        width: 120px;
+        height: 50px;
+        position: relative;
+        margin-top: 19px;
+    }
+    nav {
+        float: left;
+        padding-top: $right-top-pad;
+    }
+
+    .mood {
+        padding-top: $right-top-pad;
+        position: relative;
+    }
+}
+
+#container.internal {
+    padding: 78px 40px 40px 40px;
+    max-width: 1180px;
+}
+
+footer {
+    padding: $padding;
+}
+
+footer img {
+    padding-bottom: 16px;
+}
+
+.colors {
+    display: none;
+    margin-top: 3px;
+}
+
+.contact_form, .thanks {
+    margin-top: 145px;
+    clear: left;
+}
+
+#copy {
+    float: left;
+    width: 155px;
+    margin-right: 53px;
+}
+
+#mobile {
+    display:none;
+}
+
+header:after, #container.internal:after {
+    content: ".";
+    visibility: hidden;
+    clear: both;
+    height: 0px;
+    display: block;
+}

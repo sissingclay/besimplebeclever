@@ -1,0 +1,23 @@
+<header id="head" role="banner">
+    <section id="header">
+        <a href="#!/" id="logo" role="link">
+            <img src="img/logo-fire.png" title="Be Simple Be Clever" alt="Be Simple Be Clever" role="img" />
+        </a>
+        <nav role="navigation">
+            <a href="#!/" role="link" data-ng-class="{active: isActive('/')}">Work<span></span></a>
+            <a href="#!/about" role="link" data-ng-class="{active: isActive('/about')}">About<span></span></a>
+            <a href="#!/say-hi" role="link" data-ng-class="{active: isActive('/say-hi')}">Say Hi<span></span></a>
+        </nav>
+        <div class="mood">
+            <div id="loving">Loving <span id="colName">{{moodColour.title}}</span> Colour</div>
+            <a href="" data-ng-click="isVisibleMood()">Mood Ring</a>
+            <div class="colors" data-is-block="moodStatus">
+                <a href="" class="fire" data-is-visible="moodStatus" data-ng-click="moodRing('fire','fire')"><span></span></a>
+                <a href="" class="water" data-is-visible="moodStatus" data-ng-click="moodRing('water','water')"><span></span></a>
+                <a href="" class="nature" data-is-visible="moodStatus" data-ng-click="moodRing('nature','nature')"><span></span></a>
+                <a href="" class="sun" data-is-visible="moodStatus" data-ng-click="moodRing('sun','sun')"><span></span></a>
+                <a href="" class="stone" data-is-visible="moodStatus" data-ng-click="moodRing('gemstone','stone')"><span></span></a>
+            </div>
+        </div>
+    </section>
+</header>

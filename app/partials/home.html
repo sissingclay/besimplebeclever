@@ -1,8 +1,15 @@
-<ul class="rtg-categories">
-    <li><a href="#All" category="All" class="">All</a></li>
-    <li><a href="#Graphic_Design" category="Graphic Design" class="">Graphic Design</a></li>
-    <li><a href="#Web_\ UX Design" category="Web \ UX Design" class="rtg-current-category">Web \ UX Design</a></li>
-</ul>
+<data-ng-include src="'partials/includes/header.html'"></data-ng-include>
 
-<div deckgrid source="photos" cardTemplate="partials/deckgrid.html" class="deckgrid"></div>
+<main id="container" style="width:95%">
 
+    <ul class="rtg-categories">
+        <li><a href="#All" category="All" class="">All</a></li>
+        <li><a href="#Graphic_Design" category="Graphic Design" class="">Graphic Design</a></li>
+        <li><a href="#Web_\ UX Design" category="Web \ UX Design" class="rtg-current-category">Web \ UX Design</a></li>
+    </ul>
+
+    <div deckgrid source="photos" cardTemplate="partials/deckgrid.html" class="deckgrid"></div>
+
+</main>
+
+<data-ng-include src="'partials/includes/footer.html'"></data-ng-include>
