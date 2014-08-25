@@ -6,7 +6,7 @@
         <nav role="navigation">
             <a href="" class="prev"><</a>
             <a href="" class="next">></a>
-            <a href="" class="home"></a>
+            <a href="#!/" class="home">Home</a>
         </nav>
     </div>
 </header>
@@ -15,7 +15,7 @@
         <img  data-ng-src="{{baseUrl}}{{image.image}}" alt="{{project.title}}" />
     </div>
     <section>
-        <a href="javascript:void(0)" class="top"><img src="{{baseUrl}}/img/top.gif" /></a>
-        <img data-ng-src="{{baseUrl}}{{swatch}}" class="swatch" />
+        <a href="javascript:void(0)" class="top"><img data-ng-src="{{baseUrl}}/img/top.gif" /></a>
+        <img data-ng-src="{{baseUrl}}{{project.swatch}}" class="swatch" />
     </section>
 </main>

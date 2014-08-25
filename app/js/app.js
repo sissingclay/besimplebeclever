@@ -32,6 +32,11 @@ config(['$routeProvider','$locationProvider', function($routeProvider,$locationP
             controller: 'SayHiCtrl'
         });
     $routeProvider.otherwise({redirectTo: '/'});
+}]).
+run(['$rootScope', '$location', function($rootScope, $location) {
+    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+        $rootScope.currentPage = next.$$route.originalPath;
+    });
 }]);
 
 angular.module('beSimpleBeClever.constants', []).
